@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin-top: 45px;
+        }
+        #div1{
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            /* border: 1px solid red; */
+            /* box-shadow: 0px 5px 30px black; */
+        }
+        a{
+            font-size: 20pt;
+            text-decoration: none;
+            /* display: inline-block; */
+            width: 25%;
+            background-color: grey;
+            text-align: center;
+            color: white;
+            float: left;
+            padding: 5px;
+        }
+        a:hover{
+            background-color: #0cc072;
+            color: #f1f1f1;
+        }
+        a:active{
+            background-color: #0df892;
+        }
+        .div1{
+            margin: 10px 1vw;
+            width: calc(91vw / 3);
+            float: left;
+            height: 500px;
+            background-color: #0cc072;
+        }
+        .div1::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #div2{
+            display: none;
+        }
+        .div2{
+            display: none;
+        }
+        @media only screen and (max-width: 800px) {
+            .div1{
+                margin: 10px 1vw;
+                width: calc(93vw / 2);
+                float: left;
+                height: 500px;
+                background-color: #0cc072;
+            }
+            .div1::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            #div1{
+                display: none;
+            }
+            .div1{
+                margin: 10px 2.5vw;
+                width: 95vw;
+                height: 300px;
+                background-color: #0cc072;
+            }
+            .div1::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            #div2 {
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                background-color: grey;
+                border-radius: 5px;
+            }
+            #h1{
+                color: white;
+            }
+            .bi-list{
+                color: white;
+                position: absolute;
+                top: 3px;
+                left: 10px;
+                font-size: 30px;
+            }
+            .bi-search{
+                color: white;
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                font-size: 20px;
+            }
+            .div2{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <a href="#home">home</a>
+        <a href="#gallery">gallery</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+    </div>
+    <div id="div2">
+        <i class="bi bi-list"></i>
+        <h1 id="h1">SITE NAME</h1>
+        <i class="bi bi-search"></i>
+    </div>
+    <div class="div1"><p>hello world!</p></div>
+    <div class="div1"><p>hello world!</p></div>
+    <div class="div1"><p>hello world!</p></div>
+    <div class="div1"><p>hello world!</p></div>
+
+    <!-- <div class="div2"><p>hello world!</p></div>
+    <div class="div2"><p>hello world!</p></div>
+    <div class="div2"><p>hello world!</p></div>
+    <div class="div2"><p>hello world!</p></div> -->
+</body>
+</html>
